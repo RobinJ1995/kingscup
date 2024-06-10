@@ -1,38 +1,45 @@
-.App {
+.playing-card-grid {
+  margin: 0px;
+}
+
+.playing-card {
+  display: inline-block;
+  background: #FAFAFA;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+.playing-card.red {
+  color: red;
+}
+
+.playing-card.size-normal {
   text-align: center;
+  width: 80px;
+  font-size: 2.4em;
+  padding: 35px 0px;
+  border-radius: 10px;
+  cursor: default;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.playing-card-grid-item {
+  padding: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.playing-card-grid .card-rule {
+  display: inline-block;
+  width: calc(100% - 80px - 2px - 4px); /* 80px for .playing-card, 2px for its border, 4px for .card-rule's margin-left */
+  vertical-align: top;
+  margin-left: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.playing-card-grid .card-rule h2 {
+  margin: 0px;
+  font-size: 1.2em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.playing-card-grid .card-rule p {
+  margin: 2px 0px;
+  font-size: 0.94em;
 }
