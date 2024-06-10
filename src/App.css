@@ -25,6 +25,7 @@
 
 .playing-card-grid-item {
   padding: 4px;
+  height: 100%;
 }
 
 .playing-card-grid .card-rule {

@@ -55,4 +55,4 @@ export default {
     A,
     B,
     C
-};
+} as { [key: string] : RuleSet};
