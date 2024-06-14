@@ -16,21 +16,25 @@
 
 .playing-card.size-normal {
   text-align: center;
-  width: 80px;
-  font-size: 2.4em;
-  padding: 35px 0px;
+  width: 60px;
+  font-size: 1.6em;
+  padding: 28px 0px;
   border-radius: 10px;
   cursor: default;
 }
 
 .playing-card-grid-item {
+  margin-bottom: 8px !important;
+}
+
+.playing-card-card {
   padding: 4px;
   height: 100%;
 }
 
 .playing-card-grid .card-rule {
   display: inline-block;
-  width: calc(100% - 80px - 2px - 4px); /* 80px for .playing-card, 2px for its border, 4px for .card-rule's margin-left */
+  width: calc(100% - 60px - 2px - 4px); /* 80px for .playing-card, 2px for its border, 4px for .card-rule's margin-left */
   vertical-align: top;
   margin-left: 4px;
 }

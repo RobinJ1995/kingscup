@@ -19,7 +19,7 @@ function App() {
   return (
     <Container className="playing-card-container">
       <Grid container>
-        <Grid item xs={3}>
+        <Grid item xs={12} md={3}>
           <FormControl fullWidth>
             <InputLabel variant="standard" htmlFor="select-ruleset">
               Rule Set
@@ -35,7 +35,7 @@ function App() {
           </FormControl>
         </Grid>
       </Grid>
-      <Grid container spacing={2} className="playing-card-grid">
+      <Grid container spacing={1} className="playing-card-grid">
         {[Rank.ACE, Rank.TWO, Rank.THREE, Rank.FOUR, Rank.FIVE, Rank.SIX, Rank.SEVEN, Rank.EIGHT, Rank.NINE, Rank.TEN, Rank.JACK, Rank.QUEEN, Rank.KING, Rank.JOKER].map(rank => {
           const rule: Rule | null = ruleset[rank];
 
@@ -43,8 +43,8 @@ function App() {
             return '';
           }
 
-          return (<Grid item xs={6} md={4}>
-            <Card className="playing-card-grid-item">
+          return (<Grid item xs={6} md={4} className="playing-card-grid-item">
+            <Card className="playing-card-card">
               <PlayingCard rank={rank} suit={randomSuit()} size={Size.NORMAL} />
               <div className="card-rule">
                 <h2>{ruleset[rank]?.name}</h2>
